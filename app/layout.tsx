@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next"
-import { Instrument_Sans, Source_Serif_4 } from "next/font/google"
+import { Instrument_Sans } from "next/font/google"
+import { Source_Serif_4 } from "next/font/google"
 import { Installable } from "@/components/pwa"
 import { Shell } from "@/components/shell"
 import { BackgroundLocationTracker } from "@/components/background-location-tracker"
