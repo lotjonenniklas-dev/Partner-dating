@@ -83,10 +83,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
   if (!authReady) return null
   if (!session) {
-    if (typeof window !== "undefined") {
-      window.location.href = "/login"
-    }
-    return null
+    return <SignIn />
   }
 
   const chat = pathname.startsWith("/chat")

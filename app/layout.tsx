@@ -75,17 +75,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <ErrorBoundary>
           <ThemeProvider>
             <GoogleAuthProvider>
-              <AuthProvider>
-                <PartnerProvider>
-                  <Installable />
-                  <InstallPrompt />
-                  <BackgroundLocationTracker />
-                  <ErrorTrackingInit />
-                  <NotificationPrompt />
-                  <ProfileCacheInit />
-                  <Shell>{children}</Shell>
-                </PartnerProvider>
-              </AuthProvider>
+              <PartnerProvider>
+                <Installable />
+                <InstallPrompt />
+                <BackgroundLocationTracker />
+                <ErrorTrackingInit />
+                <NotificationPrompt />
+                <ProfileCacheInit />
+                <Shell>{children}</Shell>
+              </PartnerProvider>
             </GoogleAuthProvider>
           </ThemeProvider>
         </ErrorBoundary>
