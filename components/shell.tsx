@@ -83,6 +83,24 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
   if (!authReady) return null
   if (!session) {
+    // Auto-create anonymous session for testing
+    if (typeof window !== "undefined") {
+      try {
+        const existing = localStorage.getItem("partner-google")
+        if (!existing) {
+          const anonSession = {
+            sub: `anon-${Date.now()}-${Math.random().toString(36).slice(2,11)}`,
+            name: "Testi",
+            email: null,
+            picture: null,
+            source: "anon" as const,
+          }
+          localStorage.setItem("partner-google", JSON.stringify(anonSession))
+          window.location.reload()
+          return null
+        }
+      } catch {}
+    }
     return <SignIn />
   }
 
