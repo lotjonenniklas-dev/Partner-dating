@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Logo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        .logo-box {
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .logo-horizontal {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-vertical {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .mark {
+            width: 80px;
+            height: 60px;
+        }
+        
+        .text {
+            font-size: 48px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            color: #1a1a1a;
+        }
+        
+        .tagline {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+        
+        h2 {
+            margin: 40px 0 20px 0;
+            color: #333;
+        }
+        
+        .instructions {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 30px auto;
+            text-align: left;
+        }
+        
+        code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="instructions">
+            <h2>📋 Ohjeet logon käyttöön:</h2>
+            <ol>
+                <li>Valitse mieleinen logo-versio alta</li>
+                <li><strong>Oikea-klikkaa</strong> logon päällä</li>
+                <li>Valitse <code>"Tallenna kuva nimellä..."</code></li>
+                <li>Tallenna tietokoneelle</li>
+                <li>Käytä Canvassa tai suunnitteluohjelmassa!</li>
+            </ol>
+            <p><strong>Tai:</strong> Ota kuvakaappaus (Screenshot) ja rajaa logo.</p>
+        </div>
+
+        <h2>Logo versio 1: Vaakasuora (Käyntikortteihin)</h2>
+        <div class="logo-box">
+            <div class="logo-horizontal">
+                <svg class="mark" viewBox="0 0 40 30" aria-hidden="true">
+                    <defs>
+                        <clipPath id="partner-ring-1">
+                            <circle cx="14.6" cy="15" r="7.4" />
+                        </clipPath>
+                    </defs>
+                    <circle cx="25.4" cy="15" r="7.4" fill="currentColor" opacity="0.22" clip-path="url(#partner-ring-1)" />
+                    <circle cx="14.6" cy="15" r="8.6" fill="none" stroke="currentColor" stroke-width="2.35" />
+                    <circle cx="25.4" cy="15" r="8.6" fill="none" stroke="currentColor" stroke-width="2.35" />
+                </svg>
+                <span class="text">Partner</span>
+            </div>
+        </div>
+
+        <h2>Logo versio 2: Pystysuora</h2>
+        <div class="logo-box">
+            <div class="logo-vertical">
+                <svg class="mark" viewBox="0 0 40 30" aria-hidden="true" style="width: 100px; height: 75px;">
+                    <defs>
+                        <clipPath id="partner-ring-2">
+                            <circle cx="14.6" cy="15" r="7.4" />
+                        </clipPath>
+                    </defs>
+                    <circle cx="25.4" cy="15" r="7.4" fill="currentColor" opacity="0.22" clip-path="url(#partner-ring-2)" />
+                    <circle cx="14.6" cy="15" r="8.6" fill="none" stroke="currentColor" stroke-width="2.35" />
+                    <circle cx="25.4" cy="15" r="8.6" fill="none" stroke="currentColor" stroke-width="2.35" />
+                </svg>
+                <span class="text">Partner</span>
+                <span class="tagline">Dating ilman lokerointia</span>
+            </div>
+        </div>
+
+        <h2>Logo versio 3: Minimalistinen</h2>
+        <div class="logo-box">
+            <svg class="mark" viewBox="0 0 40 30" aria-hidden="true" style="width: 120px; height: 90px;">
+                <defs>
+                    <clipPath id="partner-ring-3">
+                        <circle cx="14.6" cy="15" r="7.4" />
+                    </clipPath>
+                </defs>
+                <circle cx="25.4" cy="15" r="7.4" fill="currentColor" opacity="0.22" clip-path="url(#partner-ring-3)" />
+                <circle cx="14.6" cy="15" r="8.6" fill="none" stroke="currentColor" stroke-width="2.35" />
+                <circle cx="25.4" cy="15" r="8.6" fill="none" stroke="currentColor" stroke-width="2.35" />
+            </svg>
+        </div>
+
+        <h2>Logo versio 4: Iso teksti (Julisteisiin)</h2>
+        <div class="logo-box">
+            <div class="logo-vertical" style="gap: 20px;">
+                <svg class="mark" viewBox="0 0 40 30" aria-hidden="true" style="width: 150px; height: 112px;">
+                    <defs>
+                        <clipPath id="partner-ring-4">
+                            <circle cx="14.6" cy="15" r="7.4" />
+                        </clipPath>
+                    </defs>
+                    <circle cx="25.4" cy="15" r="7.4" fill="currentColor" opacity="0.22" clip-path="url(#partner-ring-4)" />
+                    <circle cx="14.6" cy="15" r="8.6" fill="none" stroke="currentColor" stroke-width="2.35" />
+                    <circle cx="25.4" cy="15" r="8.6" fill="none" stroke="currentColor" stroke-width="2.35" />
+                </svg>
+                <span class="text" style="font-size: 72px;">Partner</span>
+                <span class="tagline" style="font-size: 18px;">Dating ilman lokerointia</span>
+            </div>
+        </div>
+
+        <div class="instructions" style="margin-top: 60px;">
+            <h2>💡 Käyttövinkit:</h2>
+            <ul>
+                <li><strong>Versio 1:</strong> Paras käyntikortteihin (kompakti)</li>
+                <li><strong>Versio 2:</strong> Hyvä sosiaaliseen mediaan</li>
+                <li><strong>Versio 3:</strong> Pelkkä symboli (app-ikoni tyyliin)</li>
+                <li><strong>Versio 4:</strong> Julisteisiin ja suuriin printteihin</li>
+            </ul>
+            <p><strong>Värit:</strong> Logo on musta. Canvassa voit vaihtaa väriä miten haluat!</p>
+        </div>
+    </div>
+</body>
+</html>
