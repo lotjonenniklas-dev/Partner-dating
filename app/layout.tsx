@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next"
 import { Instrument_Sans } from "next/font/google"
-import { Source_Serif_4 } from "next/font/google"
 import { Installable } from "@/components/pwa"
 import { Shell } from "@/components/shell"
 import { BackgroundLocationTracker } from "@/components/background-location-tracker"
@@ -21,11 +20,8 @@ const sans = Instrument_Sans({
   weight: ["400", "500", "600"],
 })
 
-const serif = Source_Serif_4({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-serif-face",
-  weight: ["500", "600", "700"],
-})
+// Use sans font for headings too (serif font causing build issues)
+const serif = sans
 
 export const viewport: Viewport = {
   width: "device-width",
