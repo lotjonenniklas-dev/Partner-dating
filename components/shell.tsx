@@ -83,24 +83,10 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
   if (!authReady) return null
   if (!session) {
-    const source = "anon"
-    const mockSession = {
-      sub: `anon-${Date.now()}-${Math.random().toString(36).slice(2,11)}`,
-      name: "",
-      email: null,
-      picture: null,
-      source: source as "anon",
-    }
     if (typeof window !== "undefined") {
-      try {
-        const existing = localStorage.getItem("partner-google")
-        if (!existing) {
-          localStorage.setItem("partner-google", JSON.stringify(mockSession))
-          window.location.reload()
-          return null
-        }
-      } catch {}
+      window.location.href = "/login"
     }
+    return null
   }
 
   const chat = pathname.startsWith("/chat")
