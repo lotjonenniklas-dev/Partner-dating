@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lataa Partner Logot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .tagline {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .logo-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .logo-preview {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-preview svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .logo-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .logo-desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .success.show {
+            display: block;
+        }
+        
+        .tip {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📥 Lataa Partner Logot</h1>
+            <p class="tagline">Klikkaa nappia → Logo latautuu heti!</p>
+        </div>
+
+        <!-- Logo 1: Vaakasuora -->
+        <div class="logo-card">
+            <div class="logo-title">🏆 Logo 1: Vaakasuora (SUOSITUS KÄYNTIKORTTEIHIN)</div>
+            <div class="logo-desc">Kompakti, toimii hyvin pienessä tilassa</div>
+            <div class="logo-preview">
+                <svg width="280" height="80" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <clipPath id="ring1">
+                            <circle cx="29.2" cy="40" r="14.8" />
+                        </clipPath>
+                    </defs>
+                    <circle cx="50.8" cy="40" r="14.8" fill="#000000" opacity="0.22" clip-path="url(#ring1)" />
+                    <circle cx="29.2" cy="40" r="17.2" fill="none" stroke="#000000" stroke-width="4.7" />
+                    <circle cx="50.8" cy="40" r="17.2" fill="none" stroke="#000000" stroke-width="4.7" />
+                    <text x="90" y="55" font-family="Arial, sans-serif" font-size="42" font-weight="600" fill="#1a1a1a">Partner</text>
+                </svg>
+            </div>
+            <a href="partner-logo-horizontal.svg" download="partner-logo-horizontal.svg" class="download-btn" onclick="showSuccess(this)">
+                📥 Lataa vaakasuora logo (SVG)
+            </a>
+            <div class="success">✅ Logo latautuu...</div>
+        </div>
+
+        <!-- Logo 2: Pystysuora -->
+        <div class="logo-card">
+            <div class="logo-title">📱 Logo 2: Pystysuora + Tagline</div>
+            <div class="logo-desc">Hyvä Instagram-posteihin ja julisteisiin</div>
+            <div class="logo-preview">
+                <svg width="200" height="180" viewBox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <clipPath id="ring2">
+                            <circle cx="73" cy="40" r="18.5" />
+                        </clipPath>
+                    </defs>
+                    <circle cx="127" cy="40" r="18.5" fill="#000000" opacity="0.22" clip-path="url(#ring2)" />
+                    <circle cx="73" cy="40" r="21.5" fill="none" stroke="#000000" stroke-width="5.875" />
+                    <circle cx="127" cy="40" r="21.5" fill="none" stroke="#000000" stroke-width="5.875" />
+                    <text x="100" y="115" font-family="Arial, sans-serif" font-size="48" font-weight="600" fill="#1a1a1a" text-anchor="middle">Partner</text>
+                    <text x="100" y="145" font-family="Arial, sans-serif" font-size="16" fill="#666666" text-anchor="middle">Dating ilman lokerointia</text>
+                </svg>
+            </div>
+            <a href="partner-logo-vertical.svg" download="partner-logo-vertical.svg" class="download-btn" onclick="showSuccess(this)">
+                📥 Lataa pystysuora logo (SVG)
+            </a>
+            <div class="success">✅ Logo latautuu...</div>
+        </div>
+
+        <!-- Logo 3: Symboli -->
+        <div class="logo-card">
+            <div class="logo-title">⚪ Logo 3: Pelkkä Symboli</div>
+            <div class="logo-desc">App-ikoni, favicon, pieni merkki</div>
+            <div class="logo-preview">
+                <svg width="100" height="75" viewBox="0 0 100 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <clipPath id="ring3">
+                            <circle cx="36.5" cy="37.5" r="18.5" />
+                        </clipPath>
+                    </defs>
+                    <circle cx="63.5" cy="37.5" r="18.5" fill="#000000" opacity="0.22" clip-path="url(#ring3)" />
+                    <circle cx="36.5" cy="37.5" r="21.5" fill="none" stroke="#000000" stroke-width="5.875" />
+                    <circle cx="63.5" cy="37.5" r="21.5" fill="none" stroke="#000000" stroke-width="5.875" />
+                </svg>
+            </div>
+            <a href="partner-icon.svg" download="partner-icon.svg" class="download-btn" onclick="showSuccess(this)">
+                📥 Lataa symboli (SVG)
+            </a>
+            <div class="success">✅ Logo latautuu...</div>
+        </div>
+
+        <div class="logo-card">
+            <div class="tip">
+                <strong>💡 Käyttövinkit:</strong><br><br>
+                <strong>SVG-tiedostot:</strong> Vektorigrafiikkaa → Skaalaantuu mihin kokoon tahansa ilman pikselöitymistä!<br><br>
+                <strong>Canvassa:</strong> "Uploads" → "Upload files" → Valitse ladattu SVG<br><br>
+                <strong>Värit:</strong> Logot ovat mustia. Canvassa voit vaihtaa väriä helposti!<br><br>
+                <strong>Käyntikortteihin:</strong> Käytä Logo 1 (vaakasuora) - toimii parhaiten pienessä tilassa
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSuccess(button) {
+            const success = button.nextElementSibling;
+            success.classList.add('show');
+            setTimeout(() => {
+                success.classList.remove('show');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
