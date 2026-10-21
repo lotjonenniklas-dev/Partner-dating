@@ -48,7 +48,13 @@ export function GoogleAuthProvider({ children }: { children: React.ReactNode }) 
       session,
       clientId,
       signIn,
-      signInPreview: () => signIn(previewSession()),
+      signInPreview: () => {
+        signIn(previewSession())
+        // Reload to apply session
+        if (typeof window !== "undefined") {
+          window.location.reload()
+        }
+      },
       signOut: () => {
         localStorage.removeItem(GOOGLE_SESSION_KEY)
         setSession(null)
