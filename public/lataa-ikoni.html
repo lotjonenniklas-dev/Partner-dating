@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lataa Partner Ikoni</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .tagline {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .icon-preview {
+            background: #f8f9fa;
+            padding: 60px;
+            border-radius: 15px;
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .button {
+            padding: 18px 30px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .button-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .button-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .button-secondary {
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        .button-secondary:hover {
+            background: #e5e5e5;
+        }
+        
+        .info {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            font-size: 14px;
+            color: #666;
+            text-align: left;
+            line-height: 1.6;
+        }
+        
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .success.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚪ Partner Rinkulat</h1>
+        <p class="tagline">Pelkkä symboli ilman tekstiä</p>
+        
+        <div class="icon-preview">
+            <svg width="150" height="112" viewBox="0 0 100 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <clipPath id="partner-ring-icon">
+                        <circle cx="36.5" cy="37.5" r="18.5" />
+                    </clipPath>
+                </defs>
+                <circle cx="63.5" cy="37.5" r="18.5" fill="#000000" opacity="0.22" clip-path="url(#partner-ring-icon)" />
+                <circle cx="36.5" cy="37.5" r="21.5" fill="none" stroke="#000000" stroke-width="5.875" />
+                <circle cx="63.5" cy="37.5" r="21.5" fill="none" stroke="#000000" stroke-width="5.875" />
+            </svg>
+        </div>
+        
+        <div class="buttons">
+            <button class="button button-primary" onclick="downloadIcon()">
+                📥 Lataa Rinkulat (SVG)
+            </button>
+            
+            <button class="button button-secondary" onclick="downloadAsPNG()">
+                🖼️ Lataa PNG-kuvana (500x500px)
+            </button>
+            
+            <button class="button button-secondary" onclick="downloadAsLargePNG()">
+                🖼️ Lataa PNG HD (1000x1000px)
+            </button>
+        </div>
+        
+        <div id="success" class="success">
+            ✅ Ikoni ladattu! Tarkista lataukset-kansio.
+        </div>
+        
+        <div class="info">
+            <strong>💡 Käyttökohteita:</strong><br><br>
+            • <strong>App-ikoni:</strong> Puhelimen kotinäyttö<br>
+            • <strong>Favicon:</strong> Selaimen välilehti<br>
+            • <strong>Pieni merkki:</strong> Käyntikortin nurkka<br>
+            • <strong>Social media:</strong> Profiilikuva<br><br>
+            <strong>SVG:</strong> Skaalaantuu täydellisesti (SUOSITUS)<br>
+            <strong>PNG:</strong> Kiinteä koko, toimii kaikkialla
+        </div>
+    </div>
+    
+    <script>
+        function downloadIcon() {
+            const link = document.createElement('a');
+            link.href = 'partner-icon.svg';
+            link.download = 'partner-rinkulat.svg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            showSuccess();
+        }
+        
+        function downloadAsPNG() {
+            createPNG(500);
+        }
+        
+        function downloadAsLargePNG() {
+            createPNG(1000);
+        }
+        
+        function createPNG(size) {
+            const canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            
+            // White background
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, size, size);
+            
+            // Calculate positions (centered)
+            const scale = size / 100;
+            const centerX1 = 36.5 * scale;
+            const centerY = 37.5 * scale;
+            const centerX2 = 63.5 * scale;
+            const radius = 18.5 * scale;
+            const strokeRadius = 21.5 * scale;
+            const strokeWidth = 5.875 * scale;
+            
+            // Draw intersection fill
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(centerX1, centerY, radius, 0, 2 * Math.PI);
+            ctx.clip();
+            ctx.beginPath();
+            ctx.arc(centerX2, centerY, radius, 0, 2 * Math.PI);
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.22)';
+            ctx.fill();
+            ctx.restore();
+            
+            // Draw circles with stroke
+            ctx.strokeStyle = '#000000';
+            ctx.lineWidth = strokeWidth;
+            
+            // Left circle
+            ctx.beginPath();
+            ctx.arc(centerX1, centerY, strokeRadius, 0, 2 * Math.PI);
+            ctx.stroke();
+            
+            // Right circle
+            ctx.beginPath();
+            ctx.arc(centerX2, centerY, strokeRadius, 0, 2 * Math.PI);
+            ctx.stroke();
+            
+            // Download
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `partner-rinkulat-${size}px.png`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+                showSuccess();
+            });
+        }
+        
+        function showSuccess() {
+            const success = document.getElementById('success');
+            success.classList.add('show');
+            setTimeout(() => {
+                success.classList.remove('show');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
