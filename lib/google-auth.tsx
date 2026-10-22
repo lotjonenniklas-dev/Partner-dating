@@ -31,7 +31,8 @@ function readSession() {
 export function GoogleAuthProvider({ children }: { children: React.ReactNode }) {
   const [ready, setReady] = useState(false)
   const [session, setSession] = useState<GoogleSession | null>(null)
-  const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || ""
+  // Use hardcoded client ID (it's public, so safe to include in code)
+  const clientId = "588412790239-2nh8epl2ilbr0cidvia83miq2p9pdrm3.apps.googleusercontent.com"
 
   useEffect(() => {
     setSession(readSession())
