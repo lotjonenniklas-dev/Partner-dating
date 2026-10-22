@@ -3,7 +3,8 @@ import { readLimitedJson } from "@/lib/read-body"
 import { supabase, isSupabaseConfigured } from "@/lib/supabase"
 
 export async function POST(request: Request) {
-  const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || ""
+  // Use hardcoded client ID (matches the frontend)
+  const clientId = "588412790239-2nh8epl2ilbr0cidvia83miq2p9pdrm3.apps.googleusercontent.com"
   if (!clientId) return Response.json({ error: "client" }, { status: 503 })
 
   const read = await readLimitedJson(request)
