@@ -95,13 +95,6 @@ export function SignIn() {
         <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
           Partner aukeaa Google-tunnuksella.
         </p>
-        {clientId ? (
-          <div ref={buttonRef} className="mt-8 flex min-h-11 justify-center" />
-        ) : (
-          <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
-            Google-asiakastunnusta ei ole vielä liitetty. Voit jatkaa tässä selaimessa, kunnes tunniste on asetettu.
-          </p>
-        )}
         <label className="mt-6 flex items-start gap-3 text-sm leading-5">
           <input
             type="checkbox"
@@ -114,7 +107,7 @@ export function SignIn() {
           />
           Olen vähintään 18-vuotias
         </label>
-        {!clientId && <PreviewButton adult={adult} />}
+        <PreviewButton adult={adult} />
         {problem && <p className="mt-4 text-sm text-destructive">{problem}</p>}
         <p className="mt-5 text-sm text-muted-foreground">
           <Link href="/tietosuoja" className="underline underline-offset-4">
