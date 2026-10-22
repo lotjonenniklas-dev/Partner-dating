@@ -95,6 +95,9 @@ export function SignIn() {
         <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
           Partner aukeaa Google-tunnuksella.
         </p>
+        {clientId && (
+          <div ref={buttonRef} className="mt-8 flex min-h-11 justify-center" />
+        )}
         <label className="mt-6 flex items-start gap-3 text-sm leading-5">
           <input
             type="checkbox"
